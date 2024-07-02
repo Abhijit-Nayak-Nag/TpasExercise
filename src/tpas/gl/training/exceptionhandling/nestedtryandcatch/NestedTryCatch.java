@@ -1,4 +1,4 @@
-package tpas.gl.training.exceptionhandling;
+package tpas.gl.training.exceptionhandling.nestedtryandcatch;
 
 import java.io.File;
 import java.io.FileNotFoundException;

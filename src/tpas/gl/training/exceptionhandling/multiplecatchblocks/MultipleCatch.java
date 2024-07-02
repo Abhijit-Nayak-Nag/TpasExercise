@@ -1,26 +1,33 @@
-package tpas.gl.training.exceptionhandling;
+package tpas.gl.training.exceptionhandling.multiplecatchblocks;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class DivisonProgram {
+public class MultipleCatch {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the dividend: ");
-        int dividend = scanner.nextInt();
-
-        System.out.print("Enter the divisor: ");
-        int divisor = scanner.nextInt();
-
         try {
+            // Read the dividend from the user
+            System.out.print("Enter the dividend: ");
+            int dividend = scanner.nextInt();
+
+            // Read the divisor from the user
+            System.out.print("Enter the divisor: ");
+            int divisor = scanner.nextInt();
+
             // Perform division
             int result = divide(dividend, divisor);
             System.out.println("Result of division: " + result);
+        } catch (InputMismatchException e) {
+            // Handle invalid input type
+            System.out.println("Error: Please enter valid integers.");
         } catch (ArithmeticException e) {
+            // Handle division by zero
             System.out.println("Error: Division by zero is not allowed.");
+        } finally {
+            scanner.close();
         }
-
-        scanner.close();
     }
 
     // Method to perform division and throw ArithmeticException if divisor is zero

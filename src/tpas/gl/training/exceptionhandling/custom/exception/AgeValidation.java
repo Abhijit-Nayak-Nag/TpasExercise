@@ -1,4 +1,4 @@
-package tpas.gl.training.exceptionhandling;
+package tpas.gl.training.exceptionhandling.custom.exception;
 
 import java.util.Scanner;
 

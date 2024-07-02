@@ -1,4 +1,4 @@
-package tpas.gl.training.exceptionhandling;
+package tpas.gl.training.exceptionhandling.throwingexception;
 
 public class EmailValidator {
     public static void main(String[] args) {
